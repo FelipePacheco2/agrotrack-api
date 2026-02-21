@@ -1,2 +1,28 @@
-# agrotrack-api
-Sistema de gerenciamento e pesagem agrícola desenvolvido em Java com Spring Boot e MySQL
+# 🚜 AgroTrack API
+
+[![Java](https://img.shields.io/badge/Java-17%2B-orange?logo=openjdk)](https://www.oracle.com/java/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?logo=springboot)](https://spring.io/projects/spring-boot)
+[![Maven](https://img.shields.io/badge/Maven-Build-blue?logo=apachemaven)](https://maven.apache.org/)
+
+## 📝 Visão Geral
+O **AgroTrack** é uma solução de Back-end robusta desenvolvida para otimizar o gerenciamento e a pesagem no setor agrícola. O sistema foi projetado para garantir a integridade dos dados de pesagem e facilitar o rastreamento operacional, servindo como uma ferramenta estratégica para o controle de produção.
+
+## 🛠️ Stack Tecnológica
+* **Linguagem:** Java 17
+* **Framework:** Spring Boot 3.x
+* **Persistência:** Spring Data JPA
+* **Banco de Dados:** PostgreSQL (ou MySQL)
+* **Segurança/Testes:** JUnit 5 & Mockito (Garantindo a confiabilidade das regras de negócio)
+* **Documentação:** Swagger/OpenAPI
+
+## 🏗️ Estrutura do Projeto
+O projeto segue o padrão de camadas para facilitar a manutenção e escalabilidade:
+- `controller`: Exposição dos endpoints REST.
+- `service`: Implementação das regras de negócio e validações.
+- `repository`: Interface de comunicação com o banco de dados.
+- `model`: Entidades que representam o domínio do sistema.
+
+## 🚀 Como Executar
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/agrotrack-api.git](https://github.com/seu-usuario/agrotrack-api.git)
