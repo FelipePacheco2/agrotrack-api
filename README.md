@@ -32,11 +32,11 @@ O projeto segue o padrão de camadas para facilitar a manutenção e escalabilid
 
 3. Build e Run:
 
-```Bash
-mvn clean install
-mvn spring-boot:run
-```
+   ```Bash
+   mvn clean install
+   mvn spring-boot:run
+   ```
 ## 🛡️ Testes
    Para rodar a suíte de testes unitários com Mockito:
-```Bash
-mvn test
+   ```Bash
+   mvn test
