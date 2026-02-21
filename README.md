@@ -26,3 +26,17 @@ O projeto segue o padrão de camadas para facilitar a manutenção e escalabilid
 1. **Clone o repositório:**
    ```bash
    git clone [https://github.com/seu-usuario/agrotrack-api.git](https://github.com/seu-usuario/agrotrack-api.git)
+   
+2. Configure o banco de dados:
+   Ajuste as credenciais no arquivo src/main/resources/application.properties.
+
+3. Build e Run:
+
+```Bash
+mvn clean install
+mvn spring-boot:run
+```
+## 🛡️ Testes
+   Para rodar a suíte de testes unitários com Mockito:
+```Bash
+mvn test
