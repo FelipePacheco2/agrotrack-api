@@ -1,6 +1,7 @@
-package AgroTrackpesagem.demo.config;
+package AgroTrackpesagem.demo.swaggerDoc;
 
 
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
@@ -20,6 +21,7 @@ public class WebConfig {
                         .termsOfService("https://www.linkedin.com/in/felipe-pacheco-642270297/")
                         .license(new License()
                                 .name("Apache 2.0")
-                                .url("https://www.linkedin.com/in/felipe-pacheco-642270297/")));
+                                .url("https://www.linkedin.com/in/felipe-pacheco-642270297/")))
+                .components(new Components());
     }
 }
