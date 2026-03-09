@@ -10,10 +10,10 @@ O **AgroTrack** é uma solução de Back-end robusta desenvolvida para otimizar 
 acessa a documentação: https://drive.google.com/drive/folders/1SXmj6fQdrscj6cIBvDEeROnl3WwI_nfJ?usp=drive_link
 
 ## 🛠️ Stack Tecnológica
-* **Linguagem:** Java 17
+* **Linguagem:** Java 21
 * **Framework:** Spring Boot 3.x
 * **Persistência:** Spring Data JPA
-* **Banco de Dados:** PostgreSQL (ou MySQL)
+* **Banco de Dados:**  MySQL
 * **Segurança/Testes:** JUnit 5 & Mockito (Garantindo a confiabilidade das regras de negócio)
 * **Documentação:** Swagger/OpenAPI
 
@@ -30,7 +30,7 @@ O projeto segue o padrão de camadas para facilitar a manutenção e escalabilid
    git clone [https://github.com/seu-usuario/agrotrack-api.git](https://github.com/seu-usuario/agrotrack-api.git)
    
 2. Configure o banco de dados:
-   Ajuste as credenciais no arquivo src/main/resources/application.properties.
+   Ajuste as credenciais no arquivo src/main/resources/application.yaml.
 
 3. Build e Run:
 
