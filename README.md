@@ -7,6 +7,8 @@
 ## 📝 Visão Geral
 O **AgroTrack** é uma solução de Back-end robusta desenvolvida para otimizar o gerenciamento e a pesagem no setor agrícola. O sistema foi projetado para garantir a integridade dos dados de pesagem e facilitar o rastreamento operacional, servindo como uma ferramenta estratégica para o controle de produção.
 
+acessa a documentação: https://drive.google.com/drive/folders/1SXmj6fQdrscj6cIBvDEeROnl3WwI_nfJ?usp=drive_link
+
 ## 🛠️ Stack Tecnológica
 * **Linguagem:** Java 17
 * **Framework:** Spring Boot 3.x
