@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/animals")
+@RequestMapping("/Animal")
 @Tag(name = "Animal", description = "Controle de identificação, localização e dados genéticos do rebanho.")
 public class AnimalController implements AnimalSwagger {
     private final AnimalService service;
@@ -73,4 +73,5 @@ public class AnimalController implements AnimalSwagger {
         service.delete(idAnimal);
         return ResponseEntity.noContent().build();
     }
+
 }

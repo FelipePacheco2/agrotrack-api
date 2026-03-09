@@ -21,13 +21,13 @@ public class SurroundedController implements SurroundedSwagger {
     private final SurroundedService service;
     private final SurroundedAssembler assembler;
 
-    @GetMapping("/all")
+    @GetMapping("/search-all")
     @Override
     public ResponseEntity<CollectionModel<EntityModel<SurroundedResponseDTO>>> listAll(){
         return ResponseEntity.ok(assembler.toCollectionModel(service.listAll()));
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/search")
     @Override
     public ResponseEntity<EntityModel<SurroundedResponseDTO>> getById(@PathVariable Long id) {
         return ResponseEntity.ok(assembler.toModel(service.findById(id)));
@@ -47,7 +47,7 @@ public class SurroundedController implements SurroundedSwagger {
         return ResponseEntity.ok(assembler.toModel(service.update(dto, id)));
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/delete")
     @Override
     public ResponseEntity<Void> delete(@PathVariable Long id){
         service.delete(id);

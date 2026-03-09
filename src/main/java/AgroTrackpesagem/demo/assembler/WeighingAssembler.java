@@ -1,15 +1,11 @@
 package AgroTrackpesagem.demo.assembler;
 
 import AgroTrackpesagem.demo.controller.AnimalController;
-import AgroTrackpesagem.demo.controller.SurroundedController;
 import AgroTrackpesagem.demo.controller.WeighingController;
-import AgroTrackpesagem.demo.mapperDto.surrounded.SurroundedMapper;
-import AgroTrackpesagem.demo.mapperDto.surrounded.SurroundedResponseDTO;
 import AgroTrackpesagem.demo.mapperDto.weighing.WeighingMapper;
 import AgroTrackpesagem.demo.mapperDto.weighing.WeighingResponseDTO;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 

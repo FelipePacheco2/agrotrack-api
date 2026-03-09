@@ -135,7 +135,7 @@ public interface AnimalSwagger {
     @Operation(
             summary = "Deletar animal pelo identificador único",
             description = "Deletar animal pelo identificador único",
-            tags = "Surrounded",
+            tags = "Animal",
             responses = {
                     @ApiResponse(
                             description = "Success",

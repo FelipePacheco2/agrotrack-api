@@ -1,9 +1,12 @@
 package AgroTrackpesagem.demo.swaggerDoc;
 
-import AgroTrackpesagem.demo.mapperDto.surrounded.SurroundedDTO;
-import AgroTrackpesagem.demo.mapperDto.surrounded.SurroundedResponseDTO;
-import AgroTrackpesagem.demo.model.Surrounded;
+import AgroTrackpesagem.demo.mapperDto.equipment.EquipmentDTO;
+import AgroTrackpesagem.demo.mapperDto.equipment.EquipmentResponseDTO;
+import AgroTrackpesagem.demo.model.Animal;
+import AgroTrackpesagem.demo.model.Equipment;
+import AgroTrackpesagem.demo.model.Weighing;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -12,81 +15,76 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-public interface SurroundedSwagger {
-    @GetMapping("/all")
-
-    ResponseEntity<CollectionModel<EntityModel<SurroundedResponseDTO>>> listAll();
-
-    @GetMapping("/{id}")
+public interface EquipmentSwagger {
+    @GetMapping("/search-all")
     @Operation(
-            summary = "Busca um cercado pelo identificador único",
-            description = "Retorna os detalhes completos de um cercado específico (localização, capacidade e ocupação) através do seu ID.",
-            tags = "Surrounded",
+            summary = "Retorna todos os Equipamentos",
+            description = "Retorna a lista completa de todos os Equipamentos cadastrados no sistema, exibindo detalhes.",
+            tags = "Equipment",
             responses = {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Surrounded.class))
+                                    schema = @Schema(implementation = Equipment.class))
                     ),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
                     @ApiResponse(description = "Internal error", responseCode = "500", content = @Content)
             }
     )
-    ResponseEntity<EntityModel<SurroundedResponseDTO>> getById(@PathVariable Long id);
+    ResponseEntity<CollectionModel<EntityModel<EquipmentResponseDTO>>> listAll();
 
     @PostMapping("/register")
     @Operation(
-            summary = "Registra um cercado",
-            description = "Registre um cercado no sistema, definindo sua finalidade " +
-                    "(MATERNITY, FATTENING, REPRODUCTION, QUARANTINE).",
-            tags = "Surrounded",
+            summary = "Registra um Equipamento",
+            description = "Registre um Equipamento  no sistema",
+            tags = "Equipment",
             responses = {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Surrounded.class))
+                                    schema = @Schema(implementation = Weighing.class))
                     ),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Internal error", responseCode = "500", content = @Content)
             }
     )
-    ResponseEntity<EntityModel<SurroundedResponseDTO>> create(@RequestBody SurroundedDTO dto);
+    ResponseEntity<EntityModel<EquipmentResponseDTO>> create(@RequestBody EquipmentDTO dto);
 
-    @PutMapping("/{id}/update")
+    @PutMapping("/{id}/update/all")
     @Operation(
-            summary = "Atualizar o cercado",
-            description = "Atualize os campos de cercado pelo identificador único",
-            tags = "Surrounded",
+            summary = "Atualizar o equipamento",
+            description = "Atualize os campos do equipamento pelo identificador único",
+            tags = "Equipment",
             responses = {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Surrounded.class))
+                                    schema = @Schema(implementation = Weighing.class))
                     ),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Not found", responseCode = "404", content = @Content),
                     @ApiResponse(description = "Internal error", responseCode = "500", content = @Content)
             }
     )
-    ResponseEntity<EntityModel<SurroundedResponseDTO>> update(
+    ResponseEntity<EntityModel<EquipmentResponseDTO>> update(
             @PathVariable Long id,
-            @RequestBody SurroundedDTO dto);
+            @RequestBody EquipmentDTO dto);
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/{id}/delete")
     @Operation(
-            summary = "Deletar cercado pelo identificador único",
-            description = "Deletar cercado pelo identificador único, desde que não tenha nenhum animal dentro",
-            tags = "Surrounded",
+            summary = "Deletar o equipamento pelo identificador único",
+            description = "Deletar equipamento pelo identificador único",
+            tags = "Equipment",
             responses = {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
                             content = @Content(mediaType = "application/json",
-                                    schema = @Schema(implementation = Surrounded.class))
+                                    schema = @Schema(implementation = Animal.class))
                     ),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Not found", responseCode = "404", content = @Content),

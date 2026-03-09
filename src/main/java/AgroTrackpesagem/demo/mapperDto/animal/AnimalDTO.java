@@ -19,6 +19,5 @@ public class AnimalDTO {
     private LocalDate birthDate;
     private Breeds breed;
     private Long surrounded;
-    private List<Weighing> weights = new ArrayList<>();
     private AnimalStatus status;
 }
